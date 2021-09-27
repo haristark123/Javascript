@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(this)
+        // this.name="Haari"
+        const person={
+            name:'Kishann',
+            checkThis:function(){               
+                console.log(this.name);
+
+                function checkThisAgain(){
+                    console.log(this.name)                          
+                } 
+                checkThisAgain.call(this);               
+            }
+           
+        }
+        // person.checkThis();
+        let func=person.checkThis.bind(person);
+        func()
+
+
+
+
+
+
+
+
+            let arr=['haari','kishann','reddy']
+            console.log(arr.sort(a,b)=>a.localCompare(b));
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
